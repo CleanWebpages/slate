@@ -19,26 +19,22 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
-
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Welcome to the Recon Advisor API! This is a work in progress so please feel free to contact us with any suggestions or comments. Thanks!
 
 # Authentication
 
 > To authorize, use this code:
 
 ```ruby
-require 'kittn'
+require 'reconadvisor'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = ReconAdvisor::APIClient.authorize!('meowmeowmeow')
 ```
 
 ```python
-import kittn
+import reconadvisor
 
-api = kittn.authorize('meowmeowmeow')
+api = reconadvisor.authorize('meowmeowmeow')
 ```
 
 ```shell
@@ -48,16 +44,16 @@ curl "api_endpoint_here"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const reconadvisor = require('reconadvisor');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = reconadvisor.authorize('meowmeowmeow');
 ```
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+ReconAdvisor uses API keys to allow access to the API. You can register a new ReconAdvisor API key at our [developer portal](https://api.reconadvisor.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+ReconAdvisor expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: meowmeowmeow`
 
@@ -65,34 +61,34 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# Vehicles
 
-## Get All Kittens
+## Get All Vehicles
 
 ```ruby
-require 'kittn'
+require 'reconadvisor'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+api = ReconAdvisor::APIClient.authorize!('meowmeowmeow')
+api.vehicles.get
 ```
 
 ```python
-import kittn
+import reconadvisor
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
+api = reconadvisor.authorize('meowmeowmeow')
+api.vehicles.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
+curl "https://api.reconadvisor.com/api/vehicles"
   -H "Authorization: meowmeowmeow"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const reconadvisor = require('reconadvisor');
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+let api = reconadvisor.authorize('meowmeowmeow');
+let vehicles = api.vehicles.get();
 ```
 
 > The above command returns JSON structured like this:
@@ -116,49 +112,49 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://api.reconadvisor.com/api/vehicles`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
 include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include vehicles that have already been adopted.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a happy vehicle is an authenticated vehicle!
 </aside>
 
-## Get a Specific Kitten
+## Get a Specific Vehicle
 
 ```ruby
-require 'kittn'
+require 'reconadvisor'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+api = ReconAdvisor::APIClient.authorize!('meowmeowmeow')
+api.vehicles.get(2)
 ```
 
 ```python
-import kittn
+import reconadvisor
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
+api = reconadvisor.authorize('meowmeowmeow')
+api.vehicles.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "https://api.reconadvisor.com/api/vehicles/2"
   -H "Authorization: meowmeowmeow"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const reconadvisor = require('reconadvisor');
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+let api = reconadvisor.authorize('meowmeowmeow');
+let max = api.vehicles.get(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -173,17 +169,17 @@ let max = api.kittens.get(2);
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific vehicle.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET https://api.reconadvisor.com/vehicles/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the vehicle to retrieve
 
