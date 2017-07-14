@@ -17,22 +17,22 @@ search: true
 
 # Introduction
 
-Welcome to the Recon Advisor API! This is a work in progress so please feel free to contact us with any suggestions or comments. Thanks!
+Welcome to the OilAuthority API! This is a work in progress so please feel free to contact us with any suggestions or comments. Thanks!
 
 # Authentication
 
 > To authorize, use this code:
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```shell
@@ -42,16 +42,16 @@ curl "api_endpoint_here"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 ```
 
 > Make sure to replace `64a26713b7d808be1c374a5b2e2b0b87` with your API key.
 
-ReconAdvisor uses API keys to allow access to the API.
+OilAuthority uses API keys to allow access to the API.
 
-ReconAdvisor expects for the API key ID and API key to be included in all API requests to the server in a header that looks like the following for non user related requests:
+OilAuthority expects for the API key ID and API key to be included in all API requests to the server in a header that looks like the following for non user related requests:
 
 `Authorization: Cleanapi-Token api_key=1:64a26713b7d808be1c374a5b2e2b0b87`
 
@@ -63,15 +63,15 @@ Almost every request requires a user id and token to be included:
 > To authorize, use this code:
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```shell
@@ -79,23 +79,23 @@ api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 curl -X POST \
      -H "Authorization: Cleanapi-Token api_key=1:64a26713b7d808be1c374a5b2e2b0b87" \
      -H "Content-Type: application/json" \
-     -d '{"data":{"email":"paul@reconadvisor.com",
+     -d '{"data":{"email":"paul@oilauthority.com",
           "password": "64a26713b7d808be1c374a5b2e2b0b87",
           "confirmation_redirect_url":"http://google.com"}}' \
-     https://api.reconadvisor.com/api/users
+     https://api.oilauthority.com/api/users
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 ```
 
 > Make sure to replace `64a26713b7d808be1c374a5b2e2b0b87` with your API key.
 
-ReconAdvisor uses API keys to allow access to the API.
+OilAuthority uses API keys to allow access to the API.
 
-ReconAdvisor expects for the API key ID and API key to be included in all API requests to the server in a header that looks like the following for non user related requests:
+OilAuthority expects for the API key ID and API key to be included in all API requests to the server in a header that looks like the following for non user related requests:
 
 `Authorization: Cleanapi-Token api_key=1:64a26713b7d808be1c374a5b2e2b0b87`
 
@@ -114,15 +114,15 @@ You must replace <code>64a26713b7d808be1c374a5b2e2b0b87</code> with your persona
 > To authorize, use this code:
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```shell
@@ -130,15 +130,15 @@ api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 curl -X POST \
      -H "Authorization: Cleanapi-Token api_key=1:64a26713b7d808be1c374a5b2e2b0b87" \
      -H "Content-Type: application/json" \
-     -d '{"data":{"email":"paul@reconadvisor.com",
+     -d '{"data":{"email":"paul@oilauthority.com",
           "password": "64a26713b7d808be1c374a5b2e2b0b87"}}' \
      http://localhost:3000/api/access_tokens -i
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 ```
 
 > Make sure to replace `64a26713b7d808be1c374a5b2e2b0b87` with your API key.
@@ -158,15 +158,15 @@ You must replace <code>64a26713b7d808be1c374a5b2e2b0b87</code> with your persona
 > To authorize, use this code:
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```shell
@@ -179,9 +179,9 @@ curl -X PATCH \
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 ```
 
 > Make sure to replace `64a26713b7d808be1c374a5b2e2b0b87` with your API key.
@@ -203,15 +203,15 @@ You must replace <code>64a26713b7d808be1c374a5b2e2b0b87</code> with your persona
 > To authorize, use this code:
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 ```
 
 ```shell
@@ -220,13 +220,13 @@ curl -X PATCH \
      -H "Authorization: Cleanapi-Token api_key=1:64a26713b7d808be1c374a5b2e2b0b87, access_token=1:fdd743cf0609a39794448f7200778257" \
      -H "Content-Type: application/json" \
      -d '{"data":{"other_permissions":"create"}}' \
-     https://api.reconadvisor.com/api/users/1
+     https://api.oilauthority.com/api/users/1
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 ```
 
 > Make sure to replace `64a26713b7d808be1c374a5b2e2b0b87` with your API key.
@@ -244,28 +244,28 @@ You must replace <code>64a26713b7d808be1c374a5b2e2b0b87</code> with your persona
 ## Get All Departments
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -294,7 +294,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
@@ -310,28 +310,28 @@ Remember — a happy vehicle is an authenticated vehicle!
 ## Get All Departments Columns
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -360,7 +360,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
@@ -376,28 +376,28 @@ Remember — a happy vehicle is an authenticated vehicle!
 ## Get All Department Permissions
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -426,7 +426,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
@@ -442,28 +442,28 @@ Remember — a happy vehicle is an authenticated vehicle!
 ## Get All Department Notifications
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -492,7 +492,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
@@ -510,28 +510,28 @@ Remember — a happy vehicle is an authenticated vehicle!
 ## Get All Vehicles
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: Cleanapi-Token api_key=1:my_api_key"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -565,7 +565,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
@@ -608,28 +608,28 @@ Remember — a happy vehicle is an authenticated vehicle!
 ## Get a Specific Vehicle
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get(2)
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get(2)
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles/2"
+curl "https://api.oilauthority.com/api/vehicles/2"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let max = api.vehicles.get(2);
 ```
 
@@ -651,7 +651,7 @@ This endpoint retrieves a specific vehicle.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/vehicles/<ID>`
+`GET https://api.oilauthority.com/vehicles/<ID>`
 
 ### URL Parameters
 
@@ -662,28 +662,28 @@ ID | The ID of the vehicle to retrieve
 ## Get All Sold Vehicles
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -712,7 +712,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
@@ -728,28 +728,28 @@ Remember — a happy vehicle is an authenticated vehicle!
 ## Get All Used Vehicles
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -778,7 +778,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
@@ -794,28 +794,28 @@ Remember — a happy vehicle is an authenticated vehicle!
 ## Get All New Vehicles
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -844,7 +844,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
@@ -860,28 +860,28 @@ Remember — a happy vehicle is an authenticated vehicle!
 ## Get All Vehicles in Department Currently
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -910,7 +910,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
@@ -926,28 +926,28 @@ Remember — a happy vehicle is an authenticated vehicle!
 ## Get All Vehicles ever in Department
 
 ```ruby
-require 'reconadvisor'
+require 'oilauthority'
 
-api = ReconAdvisor::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
+api = OilAuthority::APIClient.authorize!('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get
 ```
 
 ```python
-import reconadvisor
+import oilauthority
 
-api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87')
+api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87')
 api.vehicles.get()
 ```
 
 ```shell
-curl "https://api.reconadvisor.com/api/vehicles"
+curl "https://api.oilauthority.com/api/vehicles"
   -H "Authorization: 64a26713b7d808be1c374a5b2e2b0b87"
 ```
 
 ```javascript
-const reconadvisor = require('reconadvisor');
+const oilauthority = require('oilauthority');
 
-let api = reconadvisor.authorize('64a26713b7d808be1c374a5b2e2b0b87');
+let api = oilauthority.authorize('64a26713b7d808be1c374a5b2e2b0b87');
 let vehicles = api.vehicles.get();
 ```
 
@@ -976,7 +976,7 @@ This endpoint retrieves all vehicles.
 
 ### HTTP Request
 
-`GET https://api.reconadvisor.com/api/vehicles`
+`GET https://api.oilauthority.com/api/vehicles`
 
 ### Query Parameters
 
